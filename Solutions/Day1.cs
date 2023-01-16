@@ -4,15 +4,16 @@ using System.Net.WebSockets;
 namespace Solutions
 {
     //Advent Link: https://adventofcode.com/2022/day/1
-    public static class Day1{ 
-    
+    public static class Day1
+    {
+
         public static int GetPart1Result()
         {
             return GetTotalCaloriesPerElf().Max();
         }
-        public static int GetPart2Result() 
+        public static int GetPart2Result()
         {
-            var orderedCalories = GetTotalCaloriesPerElf().OrderByDescending(x=>x).ToList();
+            var orderedCalories = GetTotalCaloriesPerElf().OrderByDescending(x => x).ToList();
             return orderedCalories[0] + orderedCalories[1] + orderedCalories[2];
         }
 
@@ -38,5 +39,9 @@ namespace Solutions
 
             return totalCaloriesForEachElf;
         }
+
+        
+
+
     }
 }
