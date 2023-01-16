@@ -8,9 +8,10 @@ int selectedDay = ShowMenu();
 switch (selectedDay)
 {
     case 1:
-        Console.WriteLine("Solving Day 1");
-        Console.WriteLine($"Part 1: {Day1.GetPart1Result()}");
-        Console.WriteLine($"Part 2: {Day1.GetPart2Result()}");
+        SolveDay(new Day1());
+        break;
+    case 2:
+        SolveDay(new Day2());
         break;
 
 
@@ -36,3 +37,9 @@ static int ShowMenu()
     return ShowMenu();
 }
 
+static void SolveDay(IAdventSolver daySolver)
+{
+    Console.WriteLine("--- Solving Selected Day ---");
+    Console.WriteLine($"Part 1: {daySolver.GetPart1Result()}");
+    Console.WriteLine($"Part 2: {daySolver.GetPart2Result()}");
+}

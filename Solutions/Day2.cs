@@ -7,24 +7,21 @@ using System.Threading.Tasks;
 
 namespace Solutions
 {
-    internal class Day2
+    public class Day2
     {
-
-
-        static async Task GetInput(int day, int year, string cookie, string filename)
+        public Day2()
         {
-            if (!File.Exists(filename))
-            {
-                var uri = new Uri("https://adventofcode.com");
-                var cookies = new CookieContainer();
-                cookies.Add(uri, new System.Net.Cookie("session", cookie));
-                using var file = new FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.None);
-                using var handler = new HttpClientHandler() { CookieContainer = cookies };
-                using var client = new HttpClient(handler) { BaseAddress = uri };
-                using var response = await client.GetAsync($"/{year}/day/{day}/input");
-                using var stream = await response.Content.ReadAsStreamAsync();
-                await stream.CopyToAsync(file);
-            }
+            Utilities.SaveDataToFileFromWeb(2);
         }
+
+        public int GetPart1Result()
+        {
+            return 0;
+        }
+        public int GetPart2Result()
+        {
+            return 0;
+        }
+
     }
 }
