@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Solutions
 {
-    public class Day2
+    public class Day2 : IAdventSolver
     {
         public Day2()
         {
