@@ -14,7 +14,7 @@ namespace Solutions
             Utilities.SaveDataToFileFromWeb(2);
         }
 
-        public int GetPart1Result()
+        public int GetPart1Result(List<string> inputData)
         {
             return 0;
         }
